@@ -5,6 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ИСТОЧНИК ЖИЗНИ</title>
+
+
+        <link
+            rel="stylesheet/less"
+            href="./assets/styles/reset.less"
+        />
+        <link
+            rel="stylesheet/less"
+            href="./assets/styles/mainPages.less"
+        />
+        
+        <script src="less.js" type="text/javascript"></script>
     </head>
     <body>
         <header class="header"></header>
@@ -14,7 +26,7 @@
         <footer class="footer">
             <div class="conteiner">
                 <div class="footerWrapper">
-                    <h2 class="footerTitle"></h2>
+                    <h2 class="footerTitle">Меняй стратегию своей жизни! Живи 100 лет!</h2>
 
                     <ul class="footerList">
                         <ul class="feedBackList">
@@ -54,39 +66,10 @@
                                             class="socialIconsItem--icon"
                                             href="/"
                                         >
-                                            <img src="" alt="whatsapp social" />
-                                        </a>
-                                    </li>
-                                    <li class="socialIconsItem">
-                                        <a
-                                            class="socialIconsItem--icon"
-                                            href="/"
-                                        >
-                                            <img src="" alt="telegram social" />
-                                        </a>
-                                    </li>
-                                    <li class="socialIconsItem">
-                                        <a
-                                            class="socialIconsItem--icon"
-                                            href="/"
-                                        >
-                                            <img src="" alt="youTube social" />
-                                        </a>
-                                    </li>
-                                    <li class="socialIconsItem">
-                                        <a
-                                            class="socialIconsItem--icon"
-                                            href="/"
-                                        >
-                                            <img src="" alt="rutube social" />
-                                        </a>
-                                    </li>
-                                    <li class="socialIconsItem">
-                                        <a
-                                            class="socialIconsItem--icon"
-                                            href="/"
-                                        >
-                                            <img src="" alt="vk social" />
+                                            <img
+                                                src="./assets/images/socialIcons/socialIcons-whatsapp.svg"
+                                                alt="whatsapp social"
+                                            />
                                         </a>
                                     </li>
                                     <li class="socialIconsItem">
@@ -95,7 +78,51 @@
                                             href="/"
                                         >
                                             <img
-                                                src=""
+                                                src="./assets/images/socialIcons/socialIcons-telegram.svg"
+                                                alt="telegram social"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="socialIconsItem">
+                                        <a
+                                            class="socialIconsItem--icon"
+                                            href="/"
+                                        >
+                                            <img
+                                                src="./assets/images/socialIcons/socialIcons-youtub.svg"
+                                                alt="youTube social"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="socialIconsItem">
+                                        <a
+                                            class="socialIconsItem--icon"
+                                            href="/"
+                                        >
+                                            <img
+                                                src="./assets/images/socialIcons/socialIcons-rutube.svg"
+                                                alt="rutube social"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="socialIconsItem">
+                                        <a
+                                            class="socialIconsItem--icon"
+                                            href="/"
+                                        >
+                                            <img
+                                                src="./assets/images/socialIcons/socialIcons-vk.svg"
+                                                alt="vk social"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="socialIconsItem">
+                                        <a
+                                            class="socialIconsItem--icon"
+                                            href="/"
+                                        >
+                                            <img
+                                                src="./assets/images/socialIcons/socialIcons-odnoklassniki.svg"
                                                 alt="odnoklassniki social"
                                             />
                                         </a>
@@ -159,14 +186,45 @@
                                     </svg>
                                 </li>
                                 <li class="privacyPolicyItem">
-                                    <p>
+                                    <p class="privacyPolicyItem--content">
                                         Политика конфиденциальности
                                         <br />
                                         <span>Все права защищены © 2022 </span>
                                     </p>
                                 </li>
                             </ul>
-                            <li class="footerInfoItem"></li>
+                            <li class="footerInfoItem">
+                                <p class="privacyPolicyItem--content">
+                                    Задизайнено в
+                                    <span>
+                                        <svg
+                                            width="30"
+                                            height="30"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g clip-path="url(#clip0_231_8)">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M26.8146 5.62669L16.5 -0.000110865H13.5375L3.19775 5.55799C2.93606 5.64032 2.70712 5.80332 2.54369 6.02366C2.38026 6.24399 2.29071 6.51037 2.28785 6.78469L2.25005 22.7075C2.24299 22.9467 2.30606 23.1827 2.43148 23.3865C2.55691 23.5903 2.73922 23.7529 2.95595 23.8544L14.6184 29.9366C14.8661 30.0202 15.1343 30.0202 15.3819 29.9366L27.0441 23.8607C27.2609 23.7592 27.4432 23.5966 27.5686 23.3928C27.694 23.189 27.7571 22.953 27.75 22.7138L27.7875 6.85969C27.7875 6.47989 27.5889 6.00559 26.8146 5.62669ZM5.25005 21.7772V8.74849L8.17505 9.76219V20.0123L15 23.4668L21.825 20.0123V9.61189L16.5 6.83359V13.5167L13.5375 14.1551V-2.81621L14.9685 -2.85401L16.5 -2.92871V3.49129L24.7875 7.84729V21.7772L15 26.771L5.25005 21.7772Z"
+                                                    fill="#007BFF"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_231_8">
+                                                    <rect
+                                                        width="30"
+                                                        height="30"
+                                                        fill="white"
+                                                    />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </p>
+                            </li>
                         </ul>
                     </ul>
                 </div>
