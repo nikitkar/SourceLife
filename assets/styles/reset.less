@@ -13,30 +13,29 @@
     font-weight: @fontWeight;
 }
 
-
 @font-face {
     font-family: "Raleway__SemiBold";
-    src: url('../fonts/Raleway/Raleway-SemiBold.ttf') format("truetype");;
+    src: url("../fonts/Raleway/Raleway-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Raleway__Bold";
-    src: url('../fonts/Raleway/Raleway-Bold.ttf') format("truetype");;
+    src: url("../fonts/Raleway/Raleway-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Raleway__Medium";
-    src: url('../fonts/Raleway/Raleway-Medium.ttf') format("truetype");;
+    src: url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Raleway__Regular";
-    src: url('../fonts/Raleway/Raleway-Regular.ttf') format("truetype");;
+    src: url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Raleway__Light";
-    src: url('../fonts/Raleway/Raleway-Light.ttf') format("truetype");; 
+    src: url("../fonts/Raleway/Raleway-Light.ttf") format("truetype");
 }
 
 *,
@@ -391,34 +390,53 @@ body {
 
 .btn {
     .displayFlex(center, center);
-    .font(var(--SizeText__AdvantagesText), 700, 'Raleway__Bold');
+    .font(var(--SizeText__AdvantagesText), 700, "Raleway__Bold");
     word-wrap: break-word;
 
     gap: 20px;
-    gap: 30px;
 
-    background: radial-gradient(100% 1381.53% at 0% 24.25%, var(--Color__Active) 0%, #5EAADF 53.54%, #146DB8 100%);
+    background: radial-gradient(
+        100% 1381.53% at 0% 24.25%,
+        var(--Color__Active) 0%,
+        #5eaadf 53.54%,
+        #146db8 100%
+    );
 
     padding: 22px 56px;
     color: var(--Color__White);
     border-radius: 12px;
-    margin: 0 auto;
     text-align: center;
     outline: none;
     text-transform: capitalize;
-    
+
     border-bottom: 6px solid transparent;
-    border-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(100% 1381.53% at 0% 24.25%, var(--Color__Active) 0%, #6AB1E2 53.54%, #146DB8 100%);
+    border-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        radial-gradient(
+            100% 1381.53% at 0% 24.25%,
+            var(--Color__Active) 0%,
+            #6ab1e2 53.54%,
+            #146db8 100%
+        );
     border-image-slice: 1;
 
     box-shadow: inset 7.17652px 7.17652px 45.1096px rgba(255, 255, 255, 0.44);
 
-    &Content{
-        padding: 13px 28px !important;
+    &Content {
+        padding: 13px 28px;
     }
 
-    &PersonalAccount{
-        padding: 18px 33px !important;
+    &PersonalAccount {
+        padding: 18px 33px;
+
+        .font(var(--SizeText__TextButton), 400, "Raleway__Light");
+
+        border: 1px solid var(--Color__Active);
+
+        background: transparent;
+        box-shadow: inset 7px 7px 44px rgba(255, 255, 255, 0.44);
+        border-radius: 6px;
+
+        color: var(--Color__Black);
     }
 }
 
@@ -437,31 +455,30 @@ body {
     --SizeText__NavMenu: 15px;
     --SizeText__ToolTipText: 13px;
 
-
     /* Color Styles */
     --Color__White: #ffffff;
     --Color__Black: #000000;
-    --Color__Active: #1689C9;
-    --Color__ActiveBold: #0A6DBF;
-    --Color__SubTitle: #2F2F2F;
-    --Color__LiStyle: #93C4E7;
-    --Color__WarningMessage: #FFFBD8;
-    --Color__SuccessfulMessage: #B5DB95;
-    --Color__Baner: #F9E3BE;
-    --Color__WaterText: #62A2D0;
-    --Color__WarningText: #FF6666;
-    --Color__SuccessfulText: #76B541;
-    --Color__CircleActive: #97C96E;
-    --Color__CircleDisable: #FFCF7E;
-    --Color__GreenBlockPartner: #ADCF90;
+    --Color__Active: #1689c9;
+    --Color__ActiveBold: #0a6dbf;
+    --Color__SubTitle: #2f2f2f;
+    --Color__LiStyle: #93c4e7;
+    --Color__WarningMessage: #fffbd8;
+    --Color__SuccessfulMessage: #b5db95;
+    --Color__Baner: #f9e3be;
+    --Color__WaterText: #62a2d0;
+    --Color__WarningText: #ff6666;
+    --Color__SuccessfulText: #76b541;
+    --Color__CircleActive: #97c96e;
+    --Color__CircleDisable: #ffcf7e;
+    --Color__GreenBlockPartner: #adcf90;
     --Color__TitleFilterBlock: rgba(147, 196, 231, 0.5);
-    --Color__AverageDangerBlock: #FDE776;
-    --Color__AverageDangerBlockText: #DAC34E;
-    --Color__MaximumDangerBlock: #FF8A8A;
-    --Color__MaximumDangerText: #E84949;
-    --Color__SafetyBlock: #B2DA91;
-    --Color__SafetyBlockText: #8FCA5F;
-    --Color__BGBlockDisable: #F4F4F4;
-    --Color__BGBlockActive: #E4FFD4;
-    --Color__ActiveCirclePay: #70BF43;
+    --Color__AverageDangerBlock: #fde776;
+    --Color__AverageDangerBlockText: #dac34e;
+    --Color__MaximumDangerBlock: #ff8a8a;
+    --Color__MaximumDangerText: #e84949;
+    --Color__SafetyBlock: #b2da91;
+    --Color__SafetyBlockText: #8fca5f;
+    --Color__BGBlockDisable: #f4f4f4;
+    --Color__BGBlockActive: #e4ffd4;
+    --Color__ActiveCirclePay: #70bf43;
 }

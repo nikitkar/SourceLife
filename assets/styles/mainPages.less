@@ -32,7 +32,9 @@
         background: #fff;
         border-radius: 0 0 10px 10px;
 
-        padding: 15px 30px;
+        padding: 10px 30px;
+
+        width: 100%;
     }
 }
 
@@ -62,6 +64,13 @@
 }
 
 .main {
+
+
+    &Telephone{
+        .font(var(--SizeText__TitleTel), 700, "Raleway__Bold");
+        letter-spacing: 0.1em;
+        color: var(--Color__Black);
+    }
 }
 
 .footer {
@@ -143,12 +152,6 @@
 
         &Item {
             width: 100%;
-
-            &--tel {
-                .font(var(--SizeText__TitleTel), 700, "Raleway__Bold");
-                letter-spacing: 0.1em;
-                color: var(--Color__Black);
-            }
         }
     }
 }
