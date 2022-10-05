@@ -1,6 +1,64 @@
-@import "./reset.less";
+.displayFlex(@alignItems: center, @justifyContent: space-between, @flexDirection: row) {
+    display: flex;
+    flex-direction: @flexDirection;
+    align-items: @alignItems;
+    justify-content: @justifyContent;
+}
+
+.font( @fontSize: 16px, @fontWeight: 400, @fontFamily: "Raleway__Regular", @lineHeight: normal
+) {
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    line-height: @lineHeight;
+    font-weight: @fontWeight;
+}
 
 .header {
+    background: url(../images/header/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &Wrapper {
+        .displayFlex(center, center, column);
+        gap: 50px;
+    }
+
+    &Top {
+        .displayFlex(center, space-evenly);
+        gap: 10px;
+        flex-wrap: wrap;
+
+        background: #fff;
+        border-radius: 0 0 10px 10px;
+
+        padding: 15px 30px;
+    }
+}
+
+.logo {
+    max-width: 51px;
+    max-height: 48px;
+    & > svg {
+        max-width: 51px;
+        max-height: 48px;
+    }
+}
+
+.nav{
+    &List{
+        .displayFlex(center, center);
+        gap: 16px;
+    }
+
+    &Link{
+        .font(var(--SizeText__NavMenu), 300, 'Raleway__Light');
+        color: var(--Color__Black);
+    }
+
+    .activeNavLink{
+        color: var(--Color__Active);
+    }
 }
 
 .main {
@@ -129,11 +187,6 @@
 
 .privacyPolicy {
     &Item {
-        & > svg {
-            max-width: 51px;
-            max-height: 48px;
-        }
-
         &--content {
             .font(18px, 300, "Raleway__Light");
 

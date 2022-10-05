@@ -395,10 +395,11 @@ body {
     word-wrap: break-word;
 
     gap: 20px;
+    gap: 30px;
 
     background: radial-gradient(100% 1381.53% at 0% 24.25%, var(--Color__Active) 0%, #5EAADF 53.54%, #146DB8 100%);
 
-    padding: 22px 56px !important;
+    padding: 22px 56px;
     color: var(--Color__White);
     border-radius: 12px;
     margin: 0 auto;
@@ -407,10 +408,18 @@ body {
     text-transform: capitalize;
     
     border-bottom: 6px solid transparent;
-    border-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(100% 1381.53% at 0% 24.25%, #1689C9 0%, #6AB1E2 53.54%, #146DB8 100%);
+    border-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(100% 1381.53% at 0% 24.25%, var(--Color__Active) 0%, #6AB1E2 53.54%, #146DB8 100%);
     border-image-slice: 1;
 
     box-shadow: inset 7.17652px 7.17652px 45.1096px rgba(255, 255, 255, 0.44);
+
+    &Content{
+        padding: 13px 28px !important;
+    }
+
+    &PersonalAccount{
+        padding: 18px 33px !important;
+    }
 }
 
 :root {
