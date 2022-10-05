@@ -389,24 +389,27 @@ body {
     padding: 0 15px;
 }
 
-.btnStandart {
+.btn {
     .displayFlex(center, center);
     .font(var(--SizeText__AdvantagesText), 700, 'Raleway__Bold');
+    word-wrap: break-word;
 
     gap: 20px;
 
     background: radial-gradient(100% 1381.53% at 0% 24.25%, var(--Color__Active) 0%, #5EAADF 53.54%, #146DB8 100%);
 
-    padding: 13px 30x;
+    padding: 22px 56px !important;
     color: var(--Color__White);
     border-radius: 12px;
     margin: 0 auto;
     text-align: center;
     outline: none;
-    border: none;
     text-transform: capitalize;
+    
+    border-bottom: 6px solid transparent;
+    border-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(100% 1381.53% at 0% 24.25%, #1689C9 0%, #6AB1E2 53.54%, #146DB8 100%);
+    border-image-slice: 1;
 
-    border-bottom: 6px solid linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(100% 1381.53% at 0% 24.25%, #1689C9 0%, #6AB1E2 53.54%, #146DB8 100%);
     box-shadow: inset 7.17652px 7.17652px 45.1096px rgba(255, 255, 255, 0.44);
 }
 
@@ -414,6 +417,7 @@ body {
     /* Text Styles */
     --SizeText__Title: 40px;
     --SizeText__ExtraBold: 35px;
+    --SizeText__TitleTel: 28px;
     --SizeText__SubTitle: 26px;
     --SizeText__CallActionText: 25px;
     --SizeText__BlockHowToPay: 24px;
