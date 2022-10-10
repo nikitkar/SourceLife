@@ -12,3 +12,534 @@
     line-height: @lineHeight;
     font-weight: @fontWeight;
 }
+
+.header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &Wrapper {
+        .displayFlex();
+        padding: 35px 0px;
+
+        &left {
+            .displayFlex();
+            gap: 28px;
+
+            &--mes_hello {
+                .font(20px, 300);
+            }
+        }
+        &right {
+            .displayFlex();
+            gap: 53px;
+            &--сhange_password {
+                .font(20px, 300);
+                color: #558eb6;
+            }
+            &--exit {
+                .font(18px, 300);
+                border: 1px solid black;
+                width: 156px;
+                height: 52px;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+.main {
+    padding: 60px 0;
+
+    .activeWindows {
+        &Wrapper {
+            .displayFlex(flex-start, center, column);
+            gap: 12px;
+        }
+    }
+
+    .warning {
+        .displayFlex();
+        width: 100%;
+
+        &--info {
+            .displayFlex();
+            background-color: var(--Color__WarningMessage);
+            padding: 26px 26px 29px;
+            width: 100%;
+            border-left: 16px solid #f4eeb8;
+            &--left {
+                .displayFlex();
+            }
+            &_text {
+                .font(24px, 300);
+            }
+            &_src {
+                .font(24px, 300);
+                text-decoration: underline;
+            }
+            &_decor {
+                background: url(/assets/images/personalAccountPages/close.png);
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .message {
+        .displayFlex();
+        width: 100%;
+
+        &--info {
+            .displayFlex();
+            background-color: #ebffdf;
+            padding: 26px 26px 29px;
+            border-left: 16px solid var(--Color__SuccessfulMessage);
+            width: 100%;
+            &--left {
+                .displayFlex();
+            }
+            &_text {
+                .font(24px, 300);
+            }
+            &_decor {
+                background: url(/assets/images/personalAccountPages/close.png);
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .glass_info {
+        margin: 100px 0px;
+
+        &Wrapper {
+            .displayFlex(normal, normal);
+        }
+
+        .glass {
+            margin-right: 32px;
+            &--img {
+                padding-left: 30px;
+            }
+
+            &--baner {
+                background-color: var(--Color__Baner);
+                width: 325px;
+                height: 69px;
+                transform: skew(-10deg, 0);
+                .displayFlex(center, center);
+                border-radius: 7px;
+            }
+
+            &--text {
+                .font(22px, 600);
+                transform: skew(10deg, 0);
+            }
+        }
+
+        .title {
+            &--text {
+                .font(35px, 600);
+                line-height: 1.5;
+            }
+
+            &--buy_water {
+                position: relative;
+                margin-top: 87px;
+                padding: 25px 40px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 19px;
+                width: 725px;
+                &--text {
+                    .font(26px, 600);
+                }
+
+                &--token {
+                    display: block;
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    left: 587px;
+                    top: -33px;
+                    z-index: 1;
+                }
+
+                &--price {
+                    margin-top: 33px;
+
+                    &--ul {
+                        .displayFlex(center, flex-start);
+                        flex-wrap: wrap;
+                        gap: 26px 20px;
+                    }
+
+                    &--button {
+                        padding: 24px 20px;
+                        border: 1px solid var(--Color__LiStyle);
+                        border-radius: 6px;
+                        .font(18px, 300);
+                        transition: all 0.3s;
+
+                        &:hover {
+                            background-color: var(--Color__TitleFilterBlock);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .waterQuality {
+        margin-bottom: 100px;
+
+        &--title {
+            .font(30px, 600);
+        }
+
+        &--text {
+            margin-top: 22px;
+            .font(26px, 300);
+        }
+
+        .tableCompound {
+            .displayFlex(flex-start, flex-start);
+            .font(26px, 600);
+            margin-top: 97px;
+
+            &--columnFirst {
+                align-self: flex-end;
+            }
+            &--column:first-child {
+                margin-left: 0px;
+            }
+            &--column {
+                margin-left: 43px;
+
+                &--block {
+                    .displayFlex(flex-start, center, column);
+                    gap: 5px;
+                }
+
+                &--columnText {
+                    display: flex;
+                    margin-top: 16px;
+                    justify-content: center;
+                }
+                &--li {
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    width: 119px;
+                    height: 17px;
+                    border-radius: 6px;
+                }
+
+                &--title {
+                    display: flex;
+                    margin-top: 16px;
+                    justify-content: center;
+                }
+                &--text {
+                    display: flex;
+                    justify-content: center;
+                    &ColorY {
+                        color: var(--Color__AverageDangerBlockText);
+                    }
+                    &ColorG {
+                        color: var(--Color__SafetyBlockText);
+                    }
+                    &ColorR {
+                        color: var(--Color__MaximumDangerText);
+                    }
+                }
+                &--Fthree,
+                &--Ffour,
+                &--Ffive,
+                &--Fsix {
+                    background-color: var(--Color__AverageDangerBlock);
+                    border: 1px solid var(--Color__AverageDangerBlock);
+                }
+
+                &--Tfive,
+                &--Tsix {
+                    background-color: var(--Color__MaximumDangerBlock);
+                    border: 1px solid var(--Color__MaximumDangerBlock);
+                }
+
+                &--THfirst,
+                &--THtwo,
+                &--THthree,
+                &--THfour,
+                &--THfive,
+                &--THsix {
+                    background-color: var(--Color__SafetyBlock);
+                    border: 1px solid var(--Color__SafetyBlock);
+                }
+
+                &--FOfirst,
+                &--FOtwo,
+                &--FOthree,
+                &--FOfour,
+                &--FOfive,
+                &--FOsix {
+                    background-color: var(--Color__SafetyBlock);
+                    border: 1px solid var(--Color__SafetyBlock);
+                }
+
+                &--FIthree,
+                &--FIfour,
+                &--FIfive,
+                &--FIsix {
+                    background-color: var(--Color__AverageDangerBlock);
+                    border: 1px solid var(--Color__AverageDangerBlock);
+                }
+
+                &--Sfive,
+                &--Ssix {
+                    background-color: var(--Color__MaximumDangerBlock);
+                    border: 1px solid var(--Color__MaximumDangerBlock);
+                }
+            }
+        }
+    }
+
+    .statistics {
+        margin-bottom: 110px;
+        &Text {
+            .font(30px, 600);
+        }
+
+        &Block {
+            .displayFlex(center, flex-start);
+            flex-wrap: wrap;
+            margin-top: 33px;
+            gap: 44px;
+            &First {
+                padding: 46px 78px 46px 32px;
+                max-width: 438px;
+                max-height: 260px;
+                background-color: var(--Color__BGBlockDisable);
+                border-left: 7px solid #b8b8b8;
+                border-radius: 10px;
+                .displayFlex(center, flex-start);
+                flex-wrap: wrap;
+                gap: 15px;
+                &--title {
+                    .font(22px, 600);
+                }
+
+                &--text {
+                    width: 100%;
+                    .font(22px, 300);
+                }
+            }
+
+            &Two {
+                padding: 46px 96px 46px 52px;
+                max-width: 437px;
+                max-height: 260px;
+                background-color: var(--Color__BGBlockActive);
+                border-left: 7px solid #b5db95;
+                border-radius: 10px;
+                .displayFlex(center, flex-start);
+                flex-wrap: wrap;
+                gap: 15px;
+
+                &--title {
+                    .font(22px, 600);
+                }
+
+                &--text {
+                    width: 100%;
+                    .font(22px, 300);
+                }
+            }
+        }
+    }
+
+    .purchaseHistory {
+        margin-bottom: 220px;
+        &--text {
+            .font(30px, 600);
+        }
+
+        &Input {
+            .displayFlex(flex-start, flex-start);
+            margin-top: 68px;
+            flex-wrap: wrap;
+            gap: 35px;
+
+            &Start {
+                .displayFlex();
+                gap: 17px;
+            }
+
+            &--text {
+                .font(22px, 300);
+            }
+            &--date::-webkit-calendar-picker-indicator {
+                opacity: 0;
+            }
+
+            &--date {
+                position: relative;
+                width: 235px;
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                .font(22px, 300);
+                padding: 12px 0px 12px 23px;
+            }
+
+            &--date:before {
+                content: url(/assets/images/personalAccountPages/dateImg.png);
+                display: inline-block;
+                padding-right: 5px;
+                font-size: inherit;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &Table {
+            overflow-wrap: anywhere;
+            margin-top: 33px;
+
+            &--table {
+                width: 100%;
+            }
+            &--th {
+                vertical-align: middle;
+                text-align: center;
+                background-color: var(--Color__Baner);
+                height: 70px;
+            }
+
+            &--td {
+                vertical-align: middle;
+                text-align: center;
+                height: 70px;
+                border-bottom: 1px solid black;
+            }
+
+            &--title {
+                .font(22px, 600);
+                .displayFlex(center, center);
+                width: 100%;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            &--text {
+                .font(22px, 300);
+                .displayFlex(center, center);
+                width: 100%;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .yourMessages {
+        &--text {
+            .font(30px, 600);
+        }
+
+        &Input {
+            .displayFlex(center, space-between);
+            margin-top: 68px;
+            flex-wrap: wrap;
+            gap: 35px;
+
+            &Select {
+                border: 0px;
+                outline: 0px;
+            }
+            &Left {
+                .displayFlex();
+                gap: 17px;
+            }
+            &Right {
+                .displayFlex();
+                gap: 17px;
+            }
+            &Start {
+                .displayFlex();
+                gap: 17px;
+            }
+
+            &--title {
+                .font(22px, 600);
+                color: #558eb6;
+                &--span {
+                    transform: rotate(270deg);
+                }
+            }
+            &--text {
+                .font(22px, 300);
+            }
+            &--date::-webkit-calendar-picker-indicator {
+                opacity: 0;
+            }
+
+            &--date {
+                position: relative;
+                width: 235px;
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                .font(22px, 300);
+                padding: 12px 0px 12px 23px;
+            }
+
+            &--date:before {
+                content: url(/assets/images/personalAccountPages/dateImg.png);
+                display: inline-block;
+                padding-right: 5px;
+                font-size: inherit;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &Text {
+            .displayFlex();
+            overflow-wrap: anywhere;
+            flex-wrap: wrap;
+            margin-top: 33px;
+            gap: 100px;
+            &--ul {
+                width: 100%;
+            }
+            &--li {
+                .displayFlex(center);
+                height: 77px;
+                text-align: center;
+                vertical-align: middle;
+
+                &Green {
+                    background-color: var(--Color__BGBlockActive);
+                }
+
+                &--textGreen {
+                    .font(22px, 600);
+                    .displayFlex(center, flex-start);
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+                &--text {
+                    .font(22px, 300);
+                    .displayFlex(center, flex-start);
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

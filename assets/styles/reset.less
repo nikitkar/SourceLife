@@ -392,6 +392,7 @@ body {
     .displayFlex(center, center);
     .font(var(--SizeText__AdvantagesText), 700, "Raleway__Bold");
     word-wrap: break-word;
+    white-space: nowrap;
 
     gap: 20px;
 
@@ -421,8 +422,24 @@ body {
 
     box-shadow: inset 7.17652px 7.17652px 45.1096px rgba(255, 255, 255, 0.44);
 
+    @media (max-width: 500px) {
+        font-size: 10px;
+        padding: 16px 40px;
+    }
+
     &Content {
         padding: 13px 28px;
+
+        @media (max-width: 500px) {
+            font-size: 12px;
+
+            padding: 6px 11px;
+        }
+
+        & > svg {
+            width: 28px;
+            height: 37px;
+        }
     }
 
     &PersonalAccount {
@@ -437,6 +454,61 @@ body {
         border-radius: 6px;
 
         color: var(--Color__Black);
+
+        @media (max-width: 1150px) {
+            display: none;
+        }
+    }
+
+    &Circle {
+        border-radius: 50%;
+
+        position: relative;
+
+        padding: 44px;
+        border: none;
+        background: rgba(22, 137, 201, 0.7);
+
+        font-size: 50px;
+
+        @media (max-width: 800px) {
+            display: none;
+            font-size: 18px;
+            padding: 18px;
+        }
+
+        & > span {
+            visibility: hidden;
+
+            background-color: var(--Color__White);
+            color: var(--Color__Black);
+            border-radius: 4px;
+            padding: 11px 28px;
+
+            position: absolute;
+            top: -45px;
+            left: 0;
+
+            z-index: 1;
+
+            width: 260px;
+
+            .font(var(--SizeText__ToolTipText), 300, "Raleway__Light");
+
+            @media (max-width: 600px){
+                display: none;
+            }
+        }
+    }
+
+    &Circle:hover {
+        & > span {
+            visibility: visible;
+        }
+
+        opacity: 0.99;
+        box-shadow: 0px 4.22275px 34.8377px rgba(20, 109, 184, 0.27);
+        backdrop-filter: blur(2.5px);
     }
 }
 
