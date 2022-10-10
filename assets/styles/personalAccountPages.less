@@ -13,29 +13,30 @@
     font-weight: @fontWeight;
 }
 
-.header {
+.header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-    &Wrapper {
+    &Wrapper{ 
         .displayFlex();
         padding: 35px 0px;
-
-        &left {
+        flex-wrap: wrap;
+        
+        &left{
             .displayFlex();
             gap: 28px;
 
-            &--mes_hello {
+            &--mes_hello{
                 .font(20px, 300);
             }
         }
-        &right {
+        &right{
             .displayFlex();
             gap: 53px;
-            &--сhange_password {
+            &--сhange_password{
                 .font(20px, 300);
-                color: #558eb6;
+                color: #558EB6;
             }
-            &--exit {
+            &--exit{
                 .font(18px, 300);
                 border: 1px solid black;
                 width: 156px;
@@ -46,37 +47,39 @@
     }
 }
 
-.main {
-    padding: 60px 0;
+.main{
+    padding: 60px 0px;
 
-    .activeWindows {
-        &Wrapper {
+    .activeWindows{
+        &Wrapper{
             .displayFlex(flex-start, center, column);
             gap: 12px;
+            width: 100%;
         }
     }
-
-    .warning {
+    
+    .warning{
         .displayFlex();
         width: 100%;
+        overflow-wrap: anywhere;
 
-        &--info {
+        &--info{
             .displayFlex();
             background-color: var(--Color__WarningMessage);
-            padding: 26px 26px 29px;
+            padding: 26px 26px 29px;   
+            border-left: 16px solid #F4EEB8;
             width: 100%;
-            border-left: 16px solid #f4eeb8;
-            &--left {
+            &--left{
                 .displayFlex();
-            }
-            &_text {
+            }         
+            &_text{
                 .font(24px, 300);
             }
-            &_src {
+            &_src{
                 .font(24px, 300);
                 text-decoration: underline;
             }
-            &_decor {
+            &_decor{
                 background: url(/assets/images/personalAccountPages/close.png);
                 width: 20px;
                 height: 20px;
@@ -84,102 +87,117 @@
         }
     }
 
-    .message {
+    .message{
         .displayFlex();
         width: 100%;
 
-        &--info {
+        &--info{
             .displayFlex();
-            background-color: #ebffdf;
-            padding: 26px 26px 29px;
+            background-color: #EBFFDF;
+            padding: 26px 26px 29px;  
             border-left: 16px solid var(--Color__SuccessfulMessage);
             width: 100%;
-            &--left {
+
+            &--left{
                 .displayFlex();
-            }
-            &_text {
+            }         
+            &_text{
                 .font(24px, 300);
             }
-            &_decor {
+            &_decor{
                 background: url(/assets/images/personalAccountPages/close.png);
                 width: 20px;
                 height: 20px;
             }
         }
     }
-
-    .glass_info {
+    .glass_info{
         margin: 100px 0px;
 
-        &Wrapper {
+        &Wrapper{
             .displayFlex(normal, normal);
         }
 
-        .glass {
+        .glass{
+            position: relative;
             margin-right: 32px;
-            &--img {
+            &--img{
                 padding-left: 30px;
+
+                &--water{
+                    display: block;
+                    position: absolute;
+                    width: 189px;
+                    height: 211px;
+                    left: 65px;
+                    top: 175px;
+                    z-index: -1;
+                }
             }
 
-            &--baner {
+            &--baner{
                 background-color: var(--Color__Baner);
                 width: 325px;
                 height: 69px;
                 transform: skew(-10deg, 0);
                 .displayFlex(center, center);
-                border-radius: 7px;
+                border-radius: 7px
             }
 
-            &--text {
+            &--text{
                 .font(22px, 600);
                 transform: skew(10deg, 0);
             }
         }
 
-        .title {
-            &--text {
+        .title{
+            
+            &--text{
                 .font(35px, 600);
                 line-height: 1.5;
             }
 
-            &--buy_water {
+            &--buy_water{
                 position: relative;
                 margin-top: 87px;
                 padding: 25px 40px;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 19px;
-                width: 725px;
-                &--text {
+                max-width: 725px;
+                &--text{
                     .font(26px, 600);
                 }
 
-                &--token {
+                &--token{
                     display: block;
                     position: absolute;
                     width: 100px;
                     height: 100px;
-                    left: 587px;
+                    right: 30px;
                     top: -33px;
                     z-index: 1;
                 }
 
-                &--price {
+                &--price{
                     margin-top: 33px;
 
-                    &--ul {
+                    &--mobile{
+                        display: none;
+                    }
+                    &--ul{
                         .displayFlex(center, flex-start);
                         flex-wrap: wrap;
                         gap: 26px 20px;
                     }
-
-                    &--button {
+                    
+                    &--button{
                         padding: 24px 20px;
                         border: 1px solid var(--Color__LiStyle);
                         border-radius: 6px;
                         .font(18px, 300);
                         transition: all 0.3s;
 
-                        &:hover {
+                        &:hover{
                             background-color: var(--Color__TitleFilterBlock);
                         }
                     }
@@ -188,242 +206,332 @@
         }
     }
 
-    .waterQuality {
-        margin-bottom: 100px;
+    @media (max-width: 750px) {
+        .glass_info{
+            margin: 100px 0px;
+            .displayFlex();
+            &Wrapper{
+                .displayFlex(center, space-between, column);
+            }
+    
+            .glass{
+                position: relative;
+                margin-left: 100px;
+                &--img{
+                    padding-left: 30px;
+                    &--water{
+                        display: block;
+                        position: absolute;
+                        width: 189px;
+                        height: 211px;
+                        left: 65px;
+                        top: 175px;
+                        z-index: -1;
+                    }
+                }
+    
+                &--baner{
+                    background-color: var(--Color__Baner);
+                    width: 325px;
+                    height: 69px;
+                    transform: skew(-10deg, 0);
+                    .displayFlex(center, center);
+                    border-radius: 7px
+                }
+    
+                &--text{
+                    .font(22px, 600);
+                    transform: skew(10deg, 0);
+                }
+            }
+    
+            .title{
+                margin-top: 10px;
+                &--text{
+                    .font(35px, 600);
+                    line-height: 1.5;
+                }
+    
+                &--buy_water{
+                    position: relative;
+                    margin-top: 20px;
+                    padding: 25px 40px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 19px;
+                    width: 100%;
+                    &--text{
+                        .font(26px, 600);
+                    }
+    
+                    &--token{
+                        display: block;
+                        position: absolute;
+                        width: 65px;
+                        height: 65px;
+                        right: 30px;
+                        top: -10px;
+                        z-index: 1;
+                    }
+    
+                    &--price{
+                        display: none;
 
-        &--title {
+                        &--mobile{
+                            .displayFlex();
+                            margin-top: 33px;
+                            width: 100%;
+                            .font(12px, 300);
+
+                            &--ul{
+                                .displayFlex(flex-start, flex-start, column);
+                                flex-wrap: wrap;
+                                gap: 11px;
+                            }
+                            
+                            &--button{
+                                margin-right: 10px;
+                                vertical-align: middle;
+                            }
+
+                            &--Button{
+                                background: radial-gradient(100% 1381.53% at 0% 24.25%, #1689C9 0%, #5EAADF 53.54%, #146DB8 100%);
+                                width: 170px;
+                                height: 50px;
+                                border-radius: 6px;
+                                .font(15px, 700);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+    .waterQuality{
+        margin-bottom: 100px;
+        &--title{
             .font(30px, 600);
         }
 
-        &--text {
+        &--text{
             margin-top: 22px;
             .font(26px, 300);
         }
 
-        .tableCompound {
+        .tableCompound{
             .displayFlex(flex-start, flex-start);
             .font(26px, 600);
             margin-top: 97px;
-
-            &--columnFirst {
+            flex-wrap: wrap;
+            gap: 43px;
+    
+            &--columnFirst{
                 align-self: flex-end;
             }
-            &--column:first-child {
-                margin-left: 0px;
-            }
-            &--column {
-                margin-left: 43px;
 
-                &--block {
+            &--column{
+
+                &--block{
                     .displayFlex(flex-start, center, column);
-                    gap: 5px;
+                    gap: 5px
                 }
 
-                &--columnText {
+                &--columnText{
                     display: flex;
                     margin-top: 16px;
                     justify-content: center;
                 }
-                &--li {
+                &--li{
                     border: 1px solid rgba(0, 0, 0, 0.2);
                     width: 119px;
                     height: 17px;
                     border-radius: 6px;
+                    
                 }
 
-                &--title {
+                &--title{
                     display: flex;
                     margin-top: 16px;
                     justify-content: center;
                 }
-                &--text {
+                &--text{
                     display: flex;
                     justify-content: center;
-                    &ColorY {
+                    &ColorY{
                         color: var(--Color__AverageDangerBlockText);
                     }
-                    &ColorG {
+                    &ColorG{
                         color: var(--Color__SafetyBlockText);
                     }
-                    &ColorR {
+                    &ColorR{
                         color: var(--Color__MaximumDangerText);
                     }
                 }
-                &--Fthree,
-                &--Ffour,
-                &--Ffive,
-                &--Fsix {
+                &--Fthree, &--Ffour, &--Ffive, &--Fsix{
                     background-color: var(--Color__AverageDangerBlock);
                     border: 1px solid var(--Color__AverageDangerBlock);
                 }
 
-                &--Tfive,
-                &--Tsix {
+                &--Tfive, &--Tsix{
                     background-color: var(--Color__MaximumDangerBlock);
                     border: 1px solid var(--Color__MaximumDangerBlock);
                 }
 
-                &--THfirst,
-                &--THtwo,
-                &--THthree,
-                &--THfour,
-                &--THfive,
-                &--THsix {
+                &--THfirst, &--THtwo , &--THthree, &--THfour, &--THfive, &--THsix{
                     background-color: var(--Color__SafetyBlock);
                     border: 1px solid var(--Color__SafetyBlock);
                 }
 
-                &--FOfirst,
-                &--FOtwo,
-                &--FOthree,
-                &--FOfour,
-                &--FOfive,
-                &--FOsix {
+                &--FOfirst, &--FOtwo , &--FOthree, &--FOfour, &--FOfive, &--FOsix{
                     background-color: var(--Color__SafetyBlock);
                     border: 1px solid var(--Color__SafetyBlock);
                 }
 
-                &--FIthree,
-                &--FIfour,
-                &--FIfive,
-                &--FIsix {
+                &--FIthree, &--FIfour, &--FIfive, &--FIsix{
                     background-color: var(--Color__AverageDangerBlock);
                     border: 1px solid var(--Color__AverageDangerBlock);
                 }
 
-                &--Sfive,
-                &--Ssix {
+                &--Sfive, &--Ssix{
                     background-color: var(--Color__MaximumDangerBlock);
                     border: 1px solid var(--Color__MaximumDangerBlock);
                 }
             }
+            
         }
+
     }
 
-    .statistics {
+    .statistics{
         margin-bottom: 110px;
-        &Text {
+        &Text{
             .font(30px, 600);
         }
 
-        &Block {
+        &Block{
             .displayFlex(center, flex-start);
             flex-wrap: wrap;
             margin-top: 33px;
             gap: 44px;
-            &First {
+            &First{
                 padding: 46px 78px 46px 32px;
                 max-width: 438px;
                 max-height: 260px;
                 background-color: var(--Color__BGBlockDisable);
-                border-left: 7px solid #b8b8b8;
+                border-left: 7px solid #B8B8B8;
                 border-radius: 10px;
                 .displayFlex(center, flex-start);
                 flex-wrap: wrap;
                 gap: 15px;
-                &--title {
+                &--title{
                     .font(22px, 600);
                 }
 
-                &--text {
+                &--text{
                     width: 100%;
                     .font(22px, 300);
                 }
+                
             }
 
-            &Two {
+            &Two{
                 padding: 46px 96px 46px 52px;
                 max-width: 437px;
                 max-height: 260px;
                 background-color: var(--Color__BGBlockActive);
-                border-left: 7px solid #b5db95;
+                border-left: 7px solid #B5DB95;
                 border-radius: 10px;
                 .displayFlex(center, flex-start);
                 flex-wrap: wrap;
                 gap: 15px;
 
-                &--title {
+                &--title{
                     .font(22px, 600);
                 }
 
-                &--text {
+                &--text{
                     width: 100%;
                     .font(22px, 300);
                 }
             }
         }
     }
+    
 
-    .purchaseHistory {
+    .purchaseHistory{
         margin-bottom: 220px;
-        &--text {
+        &--text{
             .font(30px, 600);
         }
 
-        &Input {
+        &Input{
             .displayFlex(flex-start, flex-start);
             margin-top: 68px;
             flex-wrap: wrap;
             gap: 35px;
 
-            &Start {
+            &Start{
                 .displayFlex();
                 gap: 17px;
             }
 
-            &--text {
+            &--text{
                 .font(22px, 300);
             }
-            &--date::-webkit-calendar-picker-indicator {
+            &--date::-webkit-calendar-picker-indicator{
                 opacity: 0;
+                cursor: pointer;
             }
 
-            &--date {
+            &--date{
                 position: relative;
                 width: 235px;
                 height: 50px;
                 border-radius: 10px;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 .font(22px, 300);
-                padding: 12px 0px 12px 23px;
+                padding: 12px 29px 12px 23px;
+                cursor: pointer;
             }
 
-            &--date:before {
+            &--date:before{
                 content: url(/assets/images/personalAccountPages/dateImg.png);
                 display: inline-block;
-                padding-right: 5px;
                 font-size: inherit;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-                position: absolute;
-                right: 0;
+                position:absolute;
+                right: 27px;
                 top: 50%;
-                transform: translateY(-50%);
+                transform:translateY(-50%);
+                cursor: pointer;
             }
         }
 
-        &Table {
+        &Table{
             overflow-wrap: anywhere;
             margin-top: 33px;
 
-            &--table {
+            &--table{
                 width: 100%;
             }
-            &--th {
+            &--th{
                 vertical-align: middle;
                 text-align: center;
                 background-color: var(--Color__Baner);
                 height: 70px;
             }
 
-            &--td {
+            &--td{
                 vertical-align: middle;
                 text-align: center;
                 height: 70px;
                 border-bottom: 1px solid black;
             }
 
-            &--title {
+            &--title{
                 .font(22px, 600);
                 .displayFlex(center, center);
                 width: 100%;
@@ -431,7 +539,7 @@
                 vertical-align: middle;
             }
 
-            &--text {
+            &--text{
                 .font(22px, 300);
                 .displayFlex(center, center);
                 width: 100%;
@@ -441,105 +549,138 @@
         }
     }
 
-    .yourMessages {
-        &--text {
+    .yourMessages{
+
+        &--text{
+            
             .font(30px, 600);
         }
 
-        &Input {
+        &Input{
             .displayFlex(center, space-between);
             margin-top: 68px;
             flex-wrap: wrap;
             gap: 35px;
 
-            &Select {
+            &Select{
                 border: 0px;
                 outline: 0px;
             }
-            &Left {
+            &Left{
                 .displayFlex();
                 gap: 17px;
             }
-            &Right {
+            &Right{
                 .displayFlex();
+                flex-wrap: wrap;
                 gap: 17px;
             }
-            &Start {
+            &Start{
                 .displayFlex();
                 gap: 17px;
             }
 
-            &--title {
+            &--title{
                 .font(22px, 600);
-                color: #558eb6;
-                &--span {
+                color: #558EB6;
+                &--span{
                     transform: rotate(270deg);
                 }
+                cursor: pointer;
             }
-            &--text {
+            &--text{
                 .font(22px, 300);
             }
-            &--date::-webkit-calendar-picker-indicator {
+            &--date::-webkit-calendar-picker-indicator{
                 opacity: 0;
+                cursor: pointer;
             }
 
-            &--date {
+            &--date{
                 position: relative;
                 width: 235px;
                 height: 50px;
                 border-radius: 10px;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 .font(22px, 300);
-                padding: 12px 0px 12px 23px;
+                padding: 12px 29px 12px 23px;
+                cursor: pointer;
             }
 
-            &--date:before {
+            &--date:before{
                 content: url(/assets/images/personalAccountPages/dateImg.png);
                 display: inline-block;
-                padding-right: 5px;
                 font-size: inherit;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
+                position:absolute;
+                right:27px;
+                top:50%;
+                transform:translateY(-50%);
+                cursor: pointer;
             }
         }
 
-        &Text {
+        &Text{
             .displayFlex();
+            position: relative;
             overflow-wrap: anywhere;
             flex-wrap: wrap;
             margin-top: 33px;
             gap: 100px;
-            &--ul {
+
+
+            &--ul{
                 width: 100%;
             }
-            &--li {
+
+            &--li{
                 .displayFlex(center);
-                height: 77px;
+                min-height: 77px;
                 text-align: center;
                 vertical-align: middle;
+                padding: 26px 38px 26px 61px;
 
-                &Green {
+                &Green{
+                    position: relative;
                     background-color: var(--Color__BGBlockActive);
                 }
 
-                &--textGreen {
+                
+                &Green::before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    left: 22px;
+                    top: 31px;
+                    background: var(--Color__ActiveCirclePay);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+
+                &--date{
+                    margin-left: 20px;
+                    .displayFlex(flex-end, flex-end);
+                }
+
+                &--textGreen{
                     .font(22px, 600);
                     .displayFlex(center, flex-start);
-                    text-align: center;
+                    text-align: left;
                     vertical-align: middle;
                 }
 
-                &--text {
+                &--text{
                     .font(22px, 300);
                     .displayFlex(center, flex-start);
-                    text-align: center;
+                    text-align: left;
                     vertical-align: middle;
                 }
+                
             }
         }
+
     }
 }

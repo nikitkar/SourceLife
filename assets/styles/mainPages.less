@@ -632,6 +632,8 @@
 }
 
 .advantages {
+    margin-bottom: 50px;
+
     &Wrapper {
         width: 100%;
     }
@@ -812,6 +814,201 @@
 }
 
 .yourWaterHeal {
+    background: url(../images/yourWaterHeal/bgYourWaterHeal.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 1500px;
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+
+    &Wrapper {
+        width: 100%;
+
+        .displayFlex(flex-start, center, column);
+        gap: 60px;
+    }
+
+    &Title {
+        .font(var(--SizeText__Title), 700, "Raleway__SemiBold");
+
+        &Block {
+            .displayFlex(flex-start, center, column);
+            gap: 40px;
+        }
+    }
+
+    &Human {
+        .displayFlex(flex-start, center);
+        gap: 40px;
+
+        &Wrapper {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+
+            position: relative;
+        }
+
+        &Circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 45px;
+            height: 45px;
+
+            background-color: var(--Color__CircleDisable);
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            &--active {
+                width: 55px;
+                height: 55px;
+
+                background-color: var(--Color__CircleActive);
+
+                box-shadow: 0px 0px 40px rgba(64, 198, 115, 0.3);
+            }
+        }
+
+        &Circle:nth-child(2) {
+            top: 0;
+            left: 150px;
+        }
+        &Circle:nth-child(3) {
+            top: 90px;
+            left: 205px;
+        }
+        &Circle:nth-child(4) {
+            top: 220px;
+            left: 220px;
+        }
+        &Circle:nth-child(5) {
+            top: 280px;
+            left: 170px;
+        }
+        &Circle:nth-child(6) {
+            top: 415px;
+            left: 125px;
+        }
+        &Circle:nth-child(7) {
+            top: 365px;
+            left: 30px;
+        }
+        &Circle:nth-child(8) {
+            top: 640px;
+            left: 250px;
+        }
+
+        &Circle::after {
+            content: "";
+            width: 16px;
+            height: 1px;
+            background: #000;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &Circle::before {
+            content: "";
+            width: 16px;
+            height: 1px;
+            background: #000;
+
+            rotate: 90deg;
+
+            position: absolute;
+            top: 66%;
+            left: 32%;
+            transform: translate(-50%, -50%);
+        }
+
+        &--human {
+            width: 380px;
+        }
+
+        &Block {
+            background: var(--Color__White);
+
+            padding: 30px 55px;
+
+            border-radius: 20px;
+            color: var(--Color__Black);
+
+            &--title {
+                .font(var(--SizeText__Title), 700, "Raleway__SemiBold", 60px);
+                .displayFlex(center, flex-start);
+                gap: 20px;
+
+                width: 100%;
+
+                & span {
+                    max-width: 50px;
+                    max-height: 50px;
+
+                    .displayFlex(center, center);
+
+                    & > img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &Wrapper {
+                    .displayFlex(flex-start, flex-start, column);
+                    gap: 20px;
+                }
+            }
+
+            &--text {
+                .font(var(--SizeText__SubTitle), 300, "Raleway__Light", 39px);
+            }
+
+            &List {
+                .displayFlex(flex-start, center, column);
+                gap: 30px;
+
+                width: 100%;
+            }
+
+            &Item {
+                width: 100%;
+
+                &--text {
+                    .displayFlex(center, space-between);
+                    gap: 15px;
+
+                    .font(var(--SizeText__SubTitle), 600, "Raleway__SemiBold", 39px);
+
+                    span {
+                        .font(var(--SizeText__SubTitle), 700, "Raleway__Bold", 39px);
+                    }
+
+                    &Blue {
+                        color: var(--Color__WaterText);
+                    }
+
+                    &Red {
+                        color: var(--Color__WarningText);
+                    }
+
+                    &Green {
+                        color: var(--Color__SuccessfulText);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer {
